@@ -21,23 +21,7 @@
         render();
     }
 
-    const render = () => {
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += `
-            <li${task.done ? ' style="text-decoration: line-through"' : ''}>
-                <button class="js-done">
-                ${task.done ? '🥳' : '☹️'}
-                </button>
-                <button class="js-removeTaskButton">Remove</button>
-                ${task.content}
-            </li>
-            `
-        }
-
-        document.querySelector(".js-tasks").innerHTML = htmlString;
-
+    const bindEvents = () => {
         const toggleDoneButtons = document.querySelectorAll(".js-done");
 
         toggleDoneButtons.forEach((doneButton, taskIndex) => {
@@ -53,6 +37,26 @@
                 removeTask(taskIndex);
             });
         });
+    }
+
+    const render = () => {
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `
+            <li${task.done ? ' style="text-decoration: line-through"' : ''}>
+                <button class="js-done">
+                ${task.done ? '🥳' : '☹️'}
+                </button>
+                <button class="js-removeTaskButton">Remove</button>
+                ${task.content}
+            </li>
+            `;
+        }
+
+        document.querySelector(".js-tasks").innerHTML = htmlString;
+
+        bindEvents();
     }
 
     const addNewTask = (newTaskContent) => {
