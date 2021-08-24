@@ -1,4 +1,5 @@
 import Form from "./Form";
+import Tasks from "./Tasks"
 
 const tasks = [
   {id : 1, content : "Przejść na Reacta", done : false},
@@ -23,7 +24,7 @@ function App() {
         <section className="section">
             <h2 className="section__header">List of Tasks</h2>
             <div className="section__body">
-                <ul className="tasks"></ul>
+                <Tasks />
             </div>
         </section>
     </main>
