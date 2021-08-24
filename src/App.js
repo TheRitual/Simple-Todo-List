@@ -24,7 +24,7 @@ function App() {
         <section className="section">
             <h2 className="section__header">List of Tasks</h2>
             <div className="section__body">
-                <Tasks />
+                <Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />
             </div>
         </section>
     </main>
