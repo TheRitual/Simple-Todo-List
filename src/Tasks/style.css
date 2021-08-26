@@ -13,6 +13,10 @@
     border-bottom: 1px solid #ddd;
 }
 
+.tasks__item--hidden {
+    display: none;
+}
+
 .tasks__button {
     border: 0;
     width: 30px;
