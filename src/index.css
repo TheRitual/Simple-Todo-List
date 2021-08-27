@@ -5,7 +5,9 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
     box-sizing: inherit;
     -webkit-font-smoothing: inherit;
 }
