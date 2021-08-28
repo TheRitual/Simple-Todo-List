@@ -4,7 +4,7 @@ const Buttons = (props) => (
      props.tasks.length > 0 && (
      <div className="buttons">
         <button onClick={props.toggleHideDone} className="buttons__button">
-            {props.hideDone ? "Show" : "Hide"}
+            {props.hideDone ? "Show" : "Hide"} done
         </button>
         <button onClick={props.setAllDone} className="buttons__button" disabled={props.tasks.every(({done}) => done)}>
             Mark All as Done
