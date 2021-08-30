@@ -6,17 +6,21 @@ import Header from "./Header";
 import Container from "./Container";
 import { useEffect, useState } from "react";
 
-function App() {
+const loadLocalList = () => {
   const localStorageList = localStorage.getItem("taskList");
 
-  const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState(
+  return (
     localStorageList ?
-    JSON.parse(localStorageList) :
-    []
+      JSON.parse(localStorageList) :
+      []
   );
+}
 
-    useEffect(() => {
+function App() {
+  const [hideDone, setHideDone] = useState(false);
+  const [tasks, setTasks] = useState(loadLocalList());
+
+  useEffect(() => {
     localStorage.setItem("taskList", JSON.stringify(tasks));
   }, [tasks]);
 
