@@ -5,39 +5,14 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 import { useState } from "react";
-import { useLocalStorageState } from "./utils/useLocalStorageState";
+import { useTasks } from "./utils/useTasks";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useLocalStorageState("taskList",[])
+  const { tasks, removeTask, toggleTaskDone, setAllDone, addNewTask } = useTasks();
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
-  }
-
-  const removeTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id !== id));
-  }
-
-  const toggleTaskDone = (id) => {
-    setTasks(tasks => tasks.map(task => {
-      if (task.id === id) {
-        return { ...task, done: !task.done };
-      }
-      return task;
-    }))
-  }
-
-  const setAllDone = () => {
-    setTasks(tasks => tasks.map(task => ({ ...task, done: !task.done })));
-  }
-
-  const addNewTask = (content) => {
-    setTasks(tasks => [...tasks, {
-      content,
-      done: false,
-      id: tasks.length ? tasks[tasks.length - 1].id + 1 : 0,
-    }]);
   }
 
   return (

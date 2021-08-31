@@ -1,21 +1,11 @@
-import { useRef, useState } from "react";
+import { useFormActions } from "./useFormActions";
 import "./style.css";
 
-const Form = ({addNewTask}) => {
-    const [newTaskContent, setNewTaskContent] = useState("");
 
-    const inputRef = useRef(null);
 
-    const onFormSubmit = (event) => {
-        event.preventDefault();
-        inputRef.current.focus();
-        setNewTaskContent(newTaskContent.replace(/ +(?= )/g, '').trim());
-        if (newTaskContent !== "") {
-            addNewTask(newTaskContent);
-            setNewTaskContent("");
-        }
+const Form = ({ addNewTask }) => {
 
-    }
+    const { onFormSubmit, newTaskContent, setNewTaskContent, inputRef } = useFormActions(addNewTask);
 
     return (
         <form className="form" onSubmit={onFormSubmit}>
