@@ -19,7 +19,7 @@ export const useTasks = () => {
 
 
     const setAllDone = () => {
-        setTasks(tasks => tasks.map(task => ({ ...task, done: !task.done })));
+        setTasks(tasks => tasks.map(task => ({ ...task, done: true })));
     }
 
     const addNewTask = (content) => {
