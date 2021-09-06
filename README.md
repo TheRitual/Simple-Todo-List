@@ -1,3 +1,12 @@
+# Simple ToDo List created in React.js
+
+![screenshot](https://theritual.github.io/SimpleToDoList/screen.jpg)
+
+Link:
+https://theritual.github.io/SimpleToDoList/
+
+Simply decide what you have to do, add it to the list, click on the green box when it's done, remove if you want to and enjoy your life!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
