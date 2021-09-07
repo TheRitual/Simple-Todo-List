@@ -1,13 +1,14 @@
 import Form from "./Form";
-import Tasks from "./Tasks"
-import Buttons from "./Buttons";
-import Section from "./Section";
-import Header from "./Header";
-import { Container } from "./Container/styled";
-import { useState } from "react";
-import { useTasks } from "./utils/useTasks";
 
-function App() {
+import Buttons from "./Buttons";
+import Section from "../../common/Section";
+import Header from "../../common/Header";
+import { Container } from "../../common/Container/styled";
+import { useState } from "react";
+import { useTasks } from "../../utils/useTasks";
+import TaskList from "./TaskList";
+
+function Tasks() {
   const [hideDone, setHideDone] = useState(false);
   const { tasks, removeTask, toggleTaskDone, setAllDone, addNewTask } = useTasks();
 
@@ -29,7 +30,7 @@ function App() {
             setAllDone={setAllDone}
           />}
         body={
-          <Tasks
+          <TaskList
             tasks={tasks}
             hideDone={hideDone}
             removeTask={removeTask}
@@ -40,4 +41,4 @@ function App() {
   );
 }
 
-export default App;
+export default Tasks;

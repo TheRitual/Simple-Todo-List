@@ -1,7 +1,7 @@
-import { TaskList, TaskItem, TaskButton, TaskContent } from "./styled";
+import { TaskItem, TaskButton, TaskContent, StyledTaskList } from "./styled";
 
-const Tasks = (props) => (
-    <TaskList>
+const TaskList = (props) => (
+    <StyledTaskList>
         {props.tasks.map(task => (
             <TaskItem key={task.id} hidden={task.done && props.hideDone}>
                 <TaskButton onClick={() => props.toggleTaskDone(task.id)} done>
@@ -13,7 +13,7 @@ const Tasks = (props) => (
                 <TaskButton onClick={() => props.removeTask(task.id)} removeButton>🗑</TaskButton>
             </TaskItem>
         ))}
-    </TaskList>
+    </StyledTaskList>
 );
 
-export default Tasks;
+export default TaskList;
