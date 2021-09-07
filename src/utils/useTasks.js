@@ -21,11 +21,14 @@ export const useTasks = () => {
     }
 
     const addNewTask = (content) => {
-        setTasks(tasks => [...tasks, {
-            content,
-            done: false,
-            id: tasks.length ? tasks[tasks.length - 1].id + 1 : 0,
-        }]);
+        const newTaskContent = content.replace(/ +(?= )/g, '').trim();
+        if(newTaskContent !== '') {
+            setTasks(tasks => [...tasks, {
+                content : newTaskContent,
+                done: false,
+                id: tasks.length ? tasks[tasks.length - 1].id + 1 : 0,
+            }]);
+        }
     }
 
     return { tasks, removeTask, toggleTaskDone, setAllDone, addNewTask };
