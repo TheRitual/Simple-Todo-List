@@ -14,6 +14,7 @@ export const SectionHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+
     @media(max-width: 767px) {
         grid-template-columns: 1fr;
     }
