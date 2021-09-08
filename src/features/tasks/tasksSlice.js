@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { nanoid } from "@reduxjs/toolkit";
 
 const tasksSlice = createSlice({
     name: 'tasks',
@@ -24,9 +25,21 @@ const tasksSlice = createSlice({
         toggleHideDone: state => {
             state.hideDone = !state.hideDone;
         },
+        fetchExampleTasks: () => { },
+        setTasks: (state, { payload: tasks }) => {
+            state.tasks = tasks.map(task => {
+                return { ...task, id: nanoid() };
+            });;
+        },
+        addMultipleTasks: ({ tasks }, { payload: newTasks }) => {
+            newTasks.forEach(task => tasks.push({ ...task, id: nanoid() }));
+        },
+        removeAll: (store) => {
+            store.tasks = [];
+        }
     }
 });
 
-export const { addTask, toggleTaskDone, toggleAllDone, removeTask, toggleHideDone } = tasksSlice.actions;
+export const { addTask, toggleTaskDone, toggleAllDone, removeTask, toggleHideDone, fetchExampleTasks, addMultipleTasks, setTasks, removeAll } = tasksSlice.actions;
 export const selectTasks = state => state.tasks;
 export default tasksSlice.reducer;
