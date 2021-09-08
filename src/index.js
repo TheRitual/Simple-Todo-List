@@ -1,46 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
 import { GlobalStyles } from "./GlobalStyles";
-//import { configureStore } from "@reduxjs/toolkit";
-import Tasks from './features/tasks/Tasks';
-
-/*
-
-const initialState = { tasks: [] };
-
-const tasksReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "tasks/addTask":
-      return {
-        ...state,
-        tasks: [
-          ...state.tasks,
-          { content: action.payload, done: false },
-        ],
-      }
-    default:
-      return state;
-  }
-}
-
-const store = configureStore({ reducer: tasksReducer });
-const addAction = content => {return {type: "tasks/addTask", payload : content}};
-const selectTasks = ({tasks}) => tasks;
-console.log(selectTasks(store.getState()));
-
-store.dispatch(addAction("Learn Redux"));
-store.dispatch(addAction("Learn reducers"));
-store.dispatch(addAction("Learn dispatch"));
-
-console.log(selectTasks(store.getState()));
-
-*/
+import App from "./App";
+import store from "./store"
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyles />
-    <Tasks />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
