@@ -17,6 +17,9 @@ export const defaultTheme = {
         short: "0.2s",
         middle: "0.4s",
         long: "1s",
+    },
+    filters: {
+        invert: "0",
     }
 }
 
@@ -39,5 +42,8 @@ export const darkTheme = {
         short: "0.2s",
         middle: "0.5s",
         long: "1s",
+    },
+    filters: {
+        invert: "1",
     }
 }

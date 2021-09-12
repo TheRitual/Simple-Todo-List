@@ -50,3 +50,11 @@ export const TaskContent = styled.span`
         color: ${({ theme }) => theme.colors.disabled};
     `}
 `;
+
+export const Icon = styled.img`
+    width: 20px;
+    margin: 5px;
+    padding: 0;
+    filter: invert(${({ theme }) => theme.filters.invert});
+    transition: ${({ theme }) => theme.transitions.middle};
+`;

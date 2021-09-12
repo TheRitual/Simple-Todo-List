@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { removeTask, selectTasksState, toggleTaskDone } from "../tasksSlice";
-import { TaskItem, TaskButton, TaskContent, StyledTaskList } from "./styled";
+import { TaskItem, TaskButton, TaskContent, StyledTaskList, Icon } from "./styled";
+import binIcon from "./delete.png";
 
 const TaskList = () => {
     const { hideDone, tasks } = useSelector(selectTasksState);
@@ -15,7 +16,9 @@ const TaskList = () => {
                     <TaskContent done={task.done}>
                         {task.content}
                     </TaskContent>
-                    <TaskButton onClick={() => dispatch(removeTask(task.id))} removeButton>🗑</TaskButton>
+                    <TaskButton onClick={() => dispatch(removeTask(task.id))} removeButton>
+                        <Icon src={binIcon} />
+                    </TaskButton>
                 </TaskItem>
             ))}
         </StyledTaskList>
