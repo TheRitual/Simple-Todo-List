@@ -43,4 +43,7 @@ export const Toggle = styled.input`
 
 export const ToggleContainer = styled.div`
     position: relative;
+    text-align: center;
+    margin: auto;
+    width: fit-content;
 `;

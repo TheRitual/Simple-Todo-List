@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const MenuWrapper = styled.nav`
+    width: 100%;
+`;
+
 export const LinkList = styled.ul`
     display: flex;
     list-style: none;
@@ -11,8 +15,9 @@ export const LinkList = styled.ul`
 `;
 
 export const LinkItem = styled.li`
-    flex-grow: 1;
     text-align: center;
+    flex-grow: 1;
+    background-color: ${({ theme }) => theme.colors.primary};
     & a{
         display: block;
         padding: 10px;

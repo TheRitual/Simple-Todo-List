@@ -35,6 +35,8 @@ export const SectionBody = styled.div`
 
 export const FlexContainer = styled.div`
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: space-evenly;
     gap: 10px;
 `;

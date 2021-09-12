@@ -4,7 +4,6 @@ import { Toggle, ToggleContainer, ToggleSlider } from "./styled";
 
 const ThemeSwitch = () => {
     const isDarkThemeOn = useSelector(selectIsDarkThemeOn);
-    console.log(isDarkThemeOn);
     const dispatch = useDispatch();
 
     return (
