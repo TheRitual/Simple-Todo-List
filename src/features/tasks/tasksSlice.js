@@ -7,6 +7,7 @@ const tasksSlice = createSlice({
     initialState: {
         tasks: getTaskFromLocalStorage(),
         hideDone: false,
+        isLoading: false,
     },
     reducers: {
         addTask: ({ tasks }, { payload: task }) => {
@@ -26,14 +27,20 @@ const tasksSlice = createSlice({
         toggleHideDone: state => {
             state.hideDone = !state.hideDone;
         },
-        fetchExampleTasks: () => { },
+        fetchExampleTasks: (state) => {
+            state.isLoading = true;
+        },
+        fetchExampleTasksError: (state) => {
+            state.isLoading = false;
+        },
         setTasks: (state, { payload: tasks }) => {
             state.tasks = tasks.map(task => {
                 return { ...task, id: nanoid() };
             });;
         },
-        addMultipleTasks: ({ tasks }, { payload: newTasks }) => {
-            newTasks.forEach(task => tasks.push({ ...task, id: nanoid() }));
+        addFetchedTasks: (state, { payload: newTasks }) => {
+            newTasks.forEach(task => state.tasks.push({ ...task, id: nanoid() }));
+            state.isLoading = false;
         },
         removeAll: (store) => {
             store.tasks = [];
@@ -41,11 +48,12 @@ const tasksSlice = createSlice({
     }
 });
 
-export const { addTask, toggleTaskDone, toggleAllDone, removeTask, toggleHideDone, fetchExampleTasks, addMultipleTasks, setTasks, removeAll } = tasksSlice.actions;
+export const { addTask, toggleTaskDone, toggleAllDone, removeTask, toggleHideDone, fetchExampleTasks, addFetchedTasks, setTasks, removeAll, fetchExampleTasksError } = tasksSlice.actions;
 
 export const selectTasksState = state => state.tasks;
 export const selectTasks = state => selectTasksState(state).tasks;
 export const selectHideDone = state => selectTasksState(state).hideDone;
+export const selectIsLoading = state => selectTasksState(state).isLoading;
 export const selectAreAllTasksDone = state => selectTasks(state).every(task => task.done);
 export const selectIsAnyTaskDone = state => selectTasks(state).some(task => task.done);
 export const selectAreTasksEmpty = state => selectTasks(state).length === 0;

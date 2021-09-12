@@ -4,6 +4,7 @@ import { TaskItem, TaskButton, TaskContent, StyledTaskList, Icon } from "./style
 import binIcon from "./delete.png";
 import { Link, useLocation } from "react-router-dom";
 import searchQueryParamName from "../searchQueryParamName";
+import { toTask } from "../../../routes";
 
 const TaskList = () => {
     const location = useLocation();
@@ -19,7 +20,7 @@ const TaskList = () => {
                         {task.done ? '✓' : ''}
                     </TaskButton>
                     <TaskContent done={task.done}>
-                        <Link to={`/tasks/${task.id}`}>
+                        <Link to={toTask({ id: task.id })}>
                             {task.content}
                         </Link>
                     </TaskContent>

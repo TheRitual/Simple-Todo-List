@@ -9,6 +9,7 @@ import Menu from "./common/Menu";
 import TasksPage from "./features/tasks/TasksPage";
 import TaskPage from "./features/tasks/TaskPage";
 import AppWrapper from "./common/AppWrapper";
+import { toAuthor, toTask, toTasks } from "./routes";
 
 const App = () => {
     const selectedTheme = useSelector(selectIsDarkThemeOn) ? darkTheme : defaultTheme;
@@ -19,17 +20,17 @@ const App = () => {
                 <AppWrapper>
                     <Menu />
                     <Switch>
-                        <Route path="/tasks/:id">
+                        <Route path={toTask()}>
                             <TaskPage />
                         </Route>
-                        <Route path="/tasks">
+                        <Route path={toTasks()}>
                             <TasksPage />
                         </Route>
-                        <Route path="/author">
+                        <Route path={toAuthor()}>
                             <Author />
                         </Route>
-                        <Route path="/">
-                            <Redirect to="/tasks" />
+                        <Route>
+                            <Redirect to={toTasks()} />
                         </Route>
                     </Switch>
                 </AppWrapper>
