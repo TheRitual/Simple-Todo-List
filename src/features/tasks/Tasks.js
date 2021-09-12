@@ -4,7 +4,7 @@ import Section from "../../common/Section";
 import Header from "../../common/Header";
 import { Container } from "../../common/Container/styled";
 import TaskList from "./TaskList";
-import ThemeSwitch from "../../common/ThemeSwitch";
+import ThemeSwitch from "../themeSwitch/ThemeSwitch";
 
 function Tasks() {
 

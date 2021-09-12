@@ -6,26 +6,25 @@ export const ToggleSlider = styled.label`
     left: 0;
     width: 42px;
     height: 26px;
-    border-radius: 15px;
+    border-radius: 5px;
     background: ${({ theme }) => theme.colors.disabled};
     cursor: pointer;
     &::after {
         content: "";
         display: block;
-        border-radius: 50%;
+        border-radius: 5px;
         width: 18px;
         height: 18px;
         margin: 3px;
         background: ${({ theme }) => theme.colors.primaryText};;
-        box-shadow: 1px 3px 3px 1px ${({ theme }) => theme.colors.shadow};;
-        transition: 0.2s;
+        transition: ${({ theme }) => theme.transitions.short};
     }
 `;
 
 export const Toggle = styled.input`
     opacity: 0;
     z-index: 1;
-    border-radius: 15px;
+    border-radius: 5px;
     width: 42px;
     height: 26px;
     &:checked + ${ToggleSlider} {
@@ -33,11 +32,11 @@ export const Toggle = styled.input`
         &::after {
             content: "";
             display: block;
-            border-radius: 50%;
+            border-radius: 5px;
             width: 18px;
             height: 18px;
             margin-left: 21px;
-            transition: 0.2s;
+            transition: ${({ theme }) => theme.transitions.short};
         }
     }
 `;

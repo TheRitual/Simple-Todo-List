@@ -20,7 +20,7 @@ export const LinkItem = styled.li`
         color: ${({ theme }) => theme.colors.primaryText};
         text-decoration: none;
         font-weight: 700;
-        transition: 0.2s;
+        transition: ${({ theme }) => theme.transitions.short};
     }
 
     & a:hover{

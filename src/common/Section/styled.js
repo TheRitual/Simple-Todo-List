@@ -4,6 +4,7 @@ export const StyledSection = styled.section`
     margin: 10px 0;
     background: ${({ theme }) => theme.colors.secondary};
     box-shadow: 0 0 5px ${({ theme }) => theme.colors.shadow};
+    transition: ${({ theme }) => theme.transitions.long} ease-in-out;
 `;
 
 export const SectionHeader = styled.header`
@@ -23,8 +24,11 @@ export const SectionHeader = styled.header`
 export const SectionTitle = styled.h2`
     font-size: 20px;
     margin: 0;
+    color: ${({ theme }) => theme.colors.defaultText};
+    transition: ${({ theme }) => theme.transitions.long} ease-in-out;
 `;
-    
+
 export const SectionBody = styled.div`
     padding: 20px;
+    transition: ${({ theme }) => theme.transitions.short} ease-in-out;
 `

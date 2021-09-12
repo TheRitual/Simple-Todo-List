@@ -10,5 +10,34 @@ export const defaultTheme = {
         borders: "#DDD",
         doneBox: "#218321",
         removeBox: "#bb2525",
+        defaultText: "#111",
+        mainBackground: "#e8e8ee",
+    },
+    transitions : {
+        short: "0.2s",
+        middle: "0.4s",
+        long: "1s",
+    }
+}
+
+export const darkTheme = {
+    colors: {
+        primary: "#d8a027",
+        primaryText: "#111",
+        secondary: "#151515",
+        secondaryText: "#d8a027",
+        disabled: "#666",
+        background: "#222",
+        shadow: "rgba(255, 255, 255, 0.7)",
+        borders: "#DDD",
+        doneBox: "#db8400",
+        removeBox: "#ad2614",
+        defaultText: "#ebc791",
+        mainBackground: "#050505",
+    },
+    transitions : {
+        short: "0.2s",
+        middle: "0.5s",
+        long: "1s",
     }
 }

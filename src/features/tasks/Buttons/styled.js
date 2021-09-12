@@ -10,7 +10,7 @@ export const Button = styled.button`
     color: ${({ theme }) => theme.colors.primary};
     border: none;
     margin: 0 0 0 20px;
-    transition: 0.3s;
+    transition: ${({ theme }) => theme.transitions.middle};
 
     @media(max-width: 767px) {
         flex-basis: 100%;

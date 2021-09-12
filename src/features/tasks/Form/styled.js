@@ -13,6 +13,9 @@ export const NewTaskForm = styled.form`
 export const NewTaskInput = styled.input`
     padding: 10px;
     border: 1px solid ${({ theme }) => theme.colors.borders};
+    background: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.defaultText};
+    transition: ${({ theme }) => theme.transitions.long};
 `;
 
 
@@ -21,7 +24,7 @@ export const NewTaskButton = styled.button`
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.primaryText};
     padding: 10px;
-    transition: 0.3s;
+    transition: ${({ theme }) => theme.transitions.short};
     
     &:hover {
         filter: brightness(1.2);

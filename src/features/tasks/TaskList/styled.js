@@ -24,7 +24,7 @@ export const TaskButton = styled.button`
     height: 30px;
     color: ${({ theme }) => theme.colors.primaryText};
     padding: 0;
-    transition: 0.3s;
+    transition: ${({ theme }) => theme.transitions.short};
     cursor: pointer;
 
     ${({ done }) => done && css`
@@ -43,8 +43,8 @@ export const TaskButton = styled.button`
 `;
 
 export const TaskContent = styled.span`
-    color:  ${({ theme }) => theme.colors.primaryText};
-    transition: 0.5s;
+    color:  ${({ theme }) => theme.colors.defaultText};
+    transition: ${({ theme }) => theme.transitions.middle};
     ${({ done }) => done && css`
         text-decoration: line-through;
         color: ${({ theme }) => theme.colors.disabled};
