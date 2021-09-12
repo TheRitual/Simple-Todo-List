@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const MenuWrapper = styled.nav`
@@ -18,21 +19,23 @@ export const LinkItem = styled.li`
     text-align: center;
     flex-grow: 1;
     background-color: ${({ theme }) => theme.colors.primary};
-    & a{
-        display: block;
-        padding: 10px;
-        background-color: ${({ theme }) => theme.colors.primary};
-        color: ${({ theme }) => theme.colors.primaryText};
-        text-decoration: none;
-        font-weight: 700;
-        transition: ${({ theme }) => theme.transitions.short};
+`;
+
+export const StyledNavLink = styled(NavLink)`
+    padding: 10px;
+    display: block;
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primaryText};
+    text-decoration: none;
+    font-weight: 700;
+    transition: ${({ theme }) => theme.transitions.short};
+
+    &:hover{
+        filter: brightness(1.2);
+        box-shadow: 0 2px 2px ${({ theme }) => theme.colors.primary};
     }
 
-    & a:hover{
-        background-color: ${({ theme }) => theme.colors.secondary};
-        color: ${({ theme }) => theme.colors.secondaryText};
-        text-decoration: none;
-        font-weight: 700;
-        box-shadow: 0 2px 2px ${({ theme }) => theme.colors.shadow};
+    &.active{
+        filter: brightness(1.3);
     }
 `;

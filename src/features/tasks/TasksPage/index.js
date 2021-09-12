@@ -8,6 +8,7 @@ import Button from "../../../common/Button";
 import { useDispatch } from "react-redux";
 import { fetchExampleTasks } from "../tasksSlice";
 import ThemeSwitch from "../../themeSwitch/ThemeSwitch";
+import Search from "../Search";
 
 
 function TasksPage() {
@@ -22,6 +23,7 @@ function TasksPage() {
           <ThemeSwitch />
         </>
       } />
+      <Section title="Search" body={<Search />} />
       <Section
         title="List of Tasks"
         extraHeaderContent={<Buttons />}

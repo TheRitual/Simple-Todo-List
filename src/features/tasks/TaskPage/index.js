@@ -2,7 +2,7 @@ import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import { Container } from "../../../common/Container/styled";
 import ThemeSwitch from "../../themeSwitch/ThemeSwitch";
-import BackButton from "./BackButton";
+import BackButton from "../../../common/BackButton";
 import { useParams } from "react-router";
 import { useSelector } from "react-redux";
 import { getTaskById } from "../tasksSlice";

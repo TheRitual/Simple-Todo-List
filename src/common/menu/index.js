@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom';
-import { LinkItem, LinkList, MenuWrapper } from './styled';
+import { LinkItem, LinkList, MenuWrapper, StyledNavLink } from './styled';
 
 const Menu = () => (
     <MenuWrapper>
         <LinkList>
-            <LinkItem> <Link to="/tasks">ToDo List</Link> </LinkItem>
-            <LinkItem> <Link to="/author">About the Author</Link> </LinkItem>
+            <LinkItem> <StyledNavLink to="/tasks">ToDo List</StyledNavLink> </LinkItem>
+            <LinkItem> <StyledNavLink to="/author">About the Author</StyledNavLink> </LinkItem>
         </LinkList>
     </MenuWrapper>
 );

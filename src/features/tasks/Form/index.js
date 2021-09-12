@@ -2,7 +2,8 @@ import { useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
 import { addTask } from "../tasksSlice";
 import { useRef, useState } from "react";
-import { NewTaskForm, NewTaskInput, NewTaskButton } from "./styled";
+import { NewTaskForm, NewTaskButton } from "./styled";
+import TasksInput from "../TasksInput";
 
 const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");
@@ -27,7 +28,7 @@ const Form = () => {
 
     return (
         <NewTaskForm onSubmit={onFormSubmit}>
-            <NewTaskInput
+            <TasksInput
                 autoFocus
                 placeholder="What to do?"
                 value={newTaskContent}
