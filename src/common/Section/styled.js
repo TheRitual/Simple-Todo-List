@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const StyledSection = styled.section`
     margin: 10px 0;
-    background: white;
-    box-shadow: 0 0 5px #ddd;
+    background: ${({ theme }) => theme.colors.secondary};
+    box-shadow: 0 0 5px ${({ theme }) => theme.colors.shadow};
 `;
 
 export const SectionHeader = styled.header`
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.borders};
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 20px;

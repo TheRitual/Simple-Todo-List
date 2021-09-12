@@ -12,23 +12,25 @@ export const NewTaskForm = styled.form`
 
 export const NewTaskInput = styled.input`
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid ${({ theme }) => theme.colors.borders};
 `;
 
 
 export const NewTaskButton = styled.button`
     border:none;
-    background-color: #008080;
-    color: #fff;
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primaryText};
     padding: 10px;
     transition: 0.3s;
     
     &:hover {
-        background-color: rgb(0, 153, 153);
-        transform: scale(1.1);
+        filter: brightness(1.2);
+        transform: scale(1.07);
+        box-shadow: 0 0 3px ${({ theme }) => theme.colors.shadow};
     }
 
     &:active {
-        background-color: rgb(0, 179, 179);
+        filter: brightness(0.9);
+        transform: scale(1.05);
     }
 `;

@@ -7,7 +7,6 @@ export const LinkList = styled.ul`
     margin: 0;
     font-size: 18px;
     border: 0px;
-    background-color: #FFF;
     width: 100%;
 `;
 
@@ -17,18 +16,18 @@ export const LinkItem = styled.li`
     & a{
         display: block;
         padding: 10px;
-        background-color: rgb(0,128,128);
-        color: #FFF;
+        background-color: ${({ theme }) => theme.colors.primary};
+        color: ${({ theme }) => theme.colors.primaryText};
         text-decoration: none;
         font-weight: 700;
         transition: 0.2s;
     }
 
     & a:hover{
-        background-color: #FFF;
-        color: rgb(0,128,128);
+        background-color: ${({ theme }) => theme.colors.secondary};
+        color: ${({ theme }) => theme.colors.secondaryText};
         text-decoration: none;
         font-weight: 700;
-        box-shadow: 0 2px 2px rgba(31, 31, 31, 0.5);
+        box-shadow: 0 2px 2px ${({ theme }) => theme.colors.shadow};
     }
 `;

@@ -7,20 +7,25 @@ export const ButtonsContainer = styled.div`
 
 export const Button = styled.button`    
     background: transparent;
-    color: teal;
+    color: ${({ theme }) => theme.colors.primary};
     border: none;
     margin: 0 0 0 20px;
-    transition: color 0.3s;
+    transition: 0.3s;
 
     @media(max-width: 767px) {
         flex-basis: 100%;
     }
 
     &:hover {
-        color: hsl(180, 100%, 35%);
+        filter: brightness(1.3);
+        transform: scale(1.07);
+        text-shadow: 0 0 5px ${({ theme }) => theme.colors.shadow};
+        cursor: pointer;
     }
 
     &:disabled {
-        color: #ccc;
+        color: ${({ theme }) => theme.colors.disabled};
+        cursor: not-allowed;
+        transform: scale(1);
     }
 `;
