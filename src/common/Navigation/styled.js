@@ -27,7 +27,7 @@ export const StyledNavLink = styled(NavLink)`
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.primaryText};
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 400;
     transition: ${({ theme }) => theme.transitions.short};
 
     &:hover{
@@ -37,5 +37,6 @@ export const StyledNavLink = styled(NavLink)`
 
     &.active{
         filter: brightness(1.3);
+        font-weight: 700;
     }
 `;
