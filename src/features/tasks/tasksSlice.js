@@ -37,7 +37,7 @@ const tasksSlice = createSlice({
         },
         removeAll: (store) => {
             store.tasks = [];
-        }
+        },
     }
 });
 
@@ -49,4 +49,7 @@ export const selectHideDone = state => selectTasksState(state).hideDone;
 export const selectAreAllTasksDone = state => selectTasks(state).every(task => task.done);
 export const selectIsAnyTaskDone = state => selectTasks(state).some(task => task.done);
 export const selectAreTasksEmpty = state => selectTasks(state).length === 0;
+
+export const getTaskById  = (state, taskId) => selectTasks(state).find(({id}) => id === taskId);
+
 export default tasksSlice.reducer;

@@ -1,16 +1,16 @@
-import Form from "./Form";
-import Buttons from "./Buttons";
-import Section from "../../common/Section";
-import Header from "../../common/Header";
-import { Container } from "../../common/Container/styled";
-import TaskList from "./TaskList";
-import Button from "../../common/Button";
+import Form from "../Form";
+import Buttons from "../Buttons";
+import Section from "../../../common/Section";
+import Header from "../../../common/Header";
+import { Container } from "../../../common/Container/styled";
+import TaskList from "../TaskList";
+import Button from "../../../common/Button";
 import { useDispatch } from "react-redux";
-import { fetchExampleTasks } from "./tasksSlice";
-import ThemeSwitch from "../themeSwitch/ThemeSwitch";
+import { fetchExampleTasks } from "../tasksSlice";
+import ThemeSwitch from "../../themeSwitch/ThemeSwitch";
 
 
-function Tasks() {
+function TasksPage() {
   const dispatch = useDispatch();
 
   return (
@@ -31,4 +31,4 @@ function Tasks() {
   );
 }
 
-export default Tasks;
+export default TasksPage;

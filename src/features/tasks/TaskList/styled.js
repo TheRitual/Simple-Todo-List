@@ -12,10 +12,14 @@ export const TaskItem = styled.li`
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.borders};
+    border-top: 1px solid ${({ theme }) => theme.colors.borders};
     ${({ hidden }) => hidden && css`
         display: none;
     `}
+    &:hover {
+        filter: drop-shadow(0 0 5px ${({ theme }) => theme.colors.primary});
+    }
 `;
 
 export const TaskButton = styled.button`
@@ -49,6 +53,10 @@ export const TaskContent = styled.span`
         text-decoration: line-through;
         color: ${({ theme }) => theme.colors.disabled};
     `}
+    & a {
+        text-decoration: none;
+        color:  ${({ theme }) => theme.colors.defaultText};
+    }
 `;
 
 export const Icon = styled.img`
