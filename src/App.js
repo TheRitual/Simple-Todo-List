@@ -5,7 +5,7 @@ import { GlobalStyles } from "./GlobalStyles";
 import { defaultTheme, darkTheme } from "./utils/themes";
 import { selectIsDarkThemeOn } from "./features/themeSwitch/themeSlice";
 import Author from "./features/author/AuthorPage";
-import Menu from "./common/Menu";
+import Navigation from "./common/Navigation";
 import TasksPage from "./features/tasks/TasksPage";
 import TaskPage from "./features/tasks/TaskPage";
 import AppWrapper from "./common/AppWrapper";
@@ -18,7 +18,7 @@ const App = () => {
             <ThemeProvider theme={selectedTheme}>
                 <GlobalStyles />
                 <AppWrapper>
-                    <Menu />
+                    <Navigation />
                     <Switch>
                         <Route path={toTask()}>
                             <TaskPage />

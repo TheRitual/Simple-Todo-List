@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const MenuWrapper = styled.nav`
+export const NavigationWrapper = styled.nav`
     width: 100%;
 `;
 

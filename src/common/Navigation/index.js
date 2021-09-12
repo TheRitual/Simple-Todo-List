@@ -1,14 +1,14 @@
 import { toAuthor, toTasks } from '../../routes';
-import { LinkItem, LinkList, MenuWrapper, StyledNavLink } from './styled';
+import { LinkItem, LinkList, NavigationWrapper, StyledNavLink } from './styled';
 
-const Menu = () => (
-    <MenuWrapper>
+const Navigation = () => (
+    <NavigationWrapper>
         <LinkList>
             <LinkItem> <StyledNavLink to={toTasks()}>ToDo List</StyledNavLink> </LinkItem>
             <LinkItem> <StyledNavLink to={toAuthor()}>About the Author</StyledNavLink> </LinkItem>
         </LinkList>
-    </MenuWrapper>
+    </NavigationWrapper>
 );
 
 
-export default Menu;
+export default Navigation;
