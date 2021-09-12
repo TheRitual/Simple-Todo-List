@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { nanoid } from "@reduxjs/toolkit";
 import { getTaskFromLocalStorage } from "./tasksLocalStorage";
 
 const tasksSlice = createSlice({
@@ -34,12 +33,10 @@ const tasksSlice = createSlice({
             state.isLoading = false;
         },
         setTasks: (state, { payload: tasks }) => {
-            state.tasks = tasks.map(task => {
-                return { ...task, id: nanoid() };
-            });;
+            state.tasks = tasks;
         },
         addFetchedTasks: (state, { payload: newTasks }) => {
-            newTasks.forEach(task => state.tasks.push({ ...task, id: nanoid() }));
+            newTasks.forEach(task => state.tasks.push(task));
             state.isLoading = false;
         },
         removeAll: (store) => {
