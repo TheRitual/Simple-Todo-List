@@ -1,11 +1,16 @@
 # Simple ToDo List created in React.js
 
-![screenshot](https://theritual.github.io/SimpleToDoList/screen.jpg)
+![screenshot](https://theritual.github.io/SimpleToDoList/splash.jpg)
 
 Link:
 https://theritual.github.io/SimpleToDoList/
 
-Simply decide what you have to do, add it to the list, click on the green box when it's done, remove if you want to and enjoy your life!
+Simple ToDo List created with React.js. Using Redux, Redux-Saga, Redux Router, Redux/Toolkit.
+
+You can add any task to the list and it will be saved in your Local Storage.
+You can check all the done tasks with button on the left to every task or delete it using one on the right side.
+There is search-bar that allows you to filter tasks on the list (it is not case-sensitive).
+You can also download sample tasks using button above new task form.
 
 # Getting Started with Create React App
 
