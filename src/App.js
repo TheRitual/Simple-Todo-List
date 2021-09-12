@@ -1,7 +1,7 @@
 import { Switch, Route, HashRouter, Redirect } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import Author from "./features/author/Author";
-import Menu from "./common/menu/Menu";
+import Menu from "./common/Menu";
 import Tasks from "./features/tasks/Tasks";
 import { defaultTheme } from "./utils/themes";
 
