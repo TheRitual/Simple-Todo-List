@@ -2,13 +2,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeTask, selectHideDone, selectTasksByQuery, toggleTaskDone } from "../tasksSlice";
 import { TaskItem, TaskButton, TaskContent, StyledTaskList, Icon } from "./styled";
 import binIcon from "./delete.png";
-import { Link, useLocation } from "react-router-dom";
-import searchQueryParamName from "../searchQueryParamName";
+import { Link } from "react-router-dom";
 import { toTask } from "../../../routes";
+import { useQueryParameter } from "../../../utils/queryParameters";
+import searchQueryParamName from "../searchQueryParamName";
 
 const TaskList = () => {
-    const location = useLocation();
-    const query = (new URLSearchParams(location.search)).get(searchQueryParamName);
+    const query = useQueryParameter(searchQueryParamName);
     const tasks = useSelector(state => selectTasksByQuery(state, query));
     const hideDone = useSelector(selectHideDone);
     const dispatch = useDispatch();
