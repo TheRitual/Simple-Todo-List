@@ -9,7 +9,7 @@ export const defaultTheme = {
         shadow: "rgba(31, 31, 31, 0.5)",
         borders: "#DDD",
         doneBox: "#218321",
-        removeBox: "#bb2525",
+        removeBox: "#fa3a2c",
         defaultText: "#111",
         mainBackground: "#e8e8ee",
     },

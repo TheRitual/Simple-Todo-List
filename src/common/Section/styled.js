@@ -32,3 +32,9 @@ export const SectionBody = styled.div`
     padding: 20px;
     transition: ${({ theme }) => theme.transitions.short} ease-in-out;
 `
+
+export const FlexContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+`;
