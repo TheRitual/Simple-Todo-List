@@ -1,7 +1,11 @@
+import ToggleSwitch from "../../features/themeSwitch/ToggleSwitch";
+import { StyledHeader } from "./styled";
+
 const Header = ({title}) => (
-    <header>
+    <StyledHeader>
         <h1>{title}</h1>
-    </header>
+        <ToggleSwitch />
+    </StyledHeader>
 );
 
 export default Header;

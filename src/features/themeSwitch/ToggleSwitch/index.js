@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectIsDarkThemeOn, toggleTheme } from "../themeSlice";
 import { Toggle, ToggleContainer, ToggleSlider } from "./styled";
 
-const ThemeSwitch = () => {
+const ToggleSwitch = () => {
     const isDarkThemeOn = useSelector(selectIsDarkThemeOn);
     const dispatch = useDispatch();
 
@@ -14,4 +14,4 @@ const ThemeSwitch = () => {
     );
 }
 
-export default ThemeSwitch;
+export default ToggleSwitch;

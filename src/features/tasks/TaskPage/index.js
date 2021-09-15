@@ -1,7 +1,6 @@
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import { Container } from "../../../common/Container/styled";
-import ThemeSwitch from "../../themeSwitch/ThemeSwitch";
 import BackButton from "../../../common/BackButton";
 import { useParams } from "react-router";
 import { useSelector } from "react-redux";
@@ -21,7 +20,7 @@ function TaskPage() {
         <>
           {!task ?
             <TaskInformation>
-              Can't find task with ID: {id}
+              Can't find chosen task
             </TaskInformation>
             :
             (<>
@@ -31,15 +30,11 @@ function TaskPage() {
                   {task.done ? `Yes` : `No`}
                 </ValueField>
               </TaskInformation>
-              <TaskInformation>
-                <KeyField>ID:</KeyField>
-                <ValueField>{id}</ValueField>
-              </TaskInformation>
             </>)
           }
           <BackButton />
         </>
-      } extraHeaderContent={<ThemeSwitch />} />
+      }/>
     </Container>
   );
 }

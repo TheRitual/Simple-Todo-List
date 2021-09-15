@@ -7,7 +7,6 @@ import TaskList from "../TaskList";
 import Button from "../../../common/Button";
 import { useDispatch } from "react-redux";
 import { fetchExampleTasks, selectIsLoading } from "../tasksSlice";
-import ThemeSwitch from "../../themeSwitch/ThemeSwitch";
 import Search from "../Search";
 import { useSelector } from "react-redux";
 
@@ -24,7 +23,6 @@ function TasksPage() {
           <Button disabled={isLoading} onClick={() => dispatch(fetchExampleTasks())}>
             {isLoading ? `Loading...` : `Get Sample Tasks`}
           </Button>
-          <ThemeSwitch />
         </>
       } />
       <Section title="Search" body={<Search />} />
