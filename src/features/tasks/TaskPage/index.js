@@ -16,25 +16,26 @@ function TaskPage() {
   return (
     <Container>
       <Header title="Task Preview" />
-      <Section title={task ? task.content : `Task doesn't exist`} body={
-        <>
-          {!task ?
-            <TaskInformation>
-              Can't find chosen task
-            </TaskInformation>
-            :
-            (<>
-              <TaskInformation>
-                <KeyField>Done:</KeyField>
-                <ValueField>
-                  {task.done ? `Yes` : `No`}
-                </ValueField>
-              </TaskInformation>
-            </>)
-          }
-          <BackButton />
-        </>
-      }/>
+      <Section
+        title={task ? task.content : `Task doesn't exist`}
+        body={
+          <>
+            {!task ?
+                (<TaskInformation>Can't find chosen task</TaskInformation>)
+              :
+                (<>
+                  <TaskInformation>
+                    <KeyField>Done:</KeyField>
+                    <ValueField>
+                      {task.done ? `Yes` : `No`}
+                    </ValueField>
+                  </TaskInformation>
+                </>)
+            }
+            <BackButton />
+          </>
+        }
+      />
     </Container>
   );
 }
