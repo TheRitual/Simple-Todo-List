@@ -15,7 +15,7 @@ export const useReplaceQueryParameter = () => {
         if (value === undefined) {
             searchParams.delete(key);
         } else {
-            searchParams.set(key, value);
+            searchParams.set(key, value.replace(/\s\s+/g, ' '));
         }
 
         const newSearch = searchParams.toString();

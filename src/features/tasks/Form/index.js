@@ -32,7 +32,7 @@ const Form = () => {
                 autoFocus
                 placeholder="What to do?"
                 value={newTaskContent}
-                onChange={(event) => setNewTaskContent(event.target.value)}
+                onChange={(event) => setNewTaskContent(event.target.value.replace(/\s\s+/g, ' '))}
                 ref={inputRef}
             />
             <NewTaskButton>Add Task</NewTaskButton>
