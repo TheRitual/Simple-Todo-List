@@ -8,22 +8,19 @@ const Buttons = () => {
     const isAnyDone = useSelector(selectIsAnyTaskDone);
     const dispatch = useDispatch();
 
-    return (<>
-        {!useSelector(selectAreTasksEmpty) && (
-            <>
-                <Button onClick={() => dispatch(toggleHideDone())} disabled={!isAnyDone}>
-                    {hideDone ? "Show" : "Hide"} done
-                </Button>
-                <Button onClick={() => dispatch(toggleAllDone())} disabled={areAllDone}>
-                    Mark All as Done
-                </Button>
-                <Button onClick={() => dispatch(removeAll())}>
-                    Remove All
-                </Button>
-            </>)
-        }
-    </>);
-
+    return !useSelector(selectAreTasksEmpty) && (
+        <>
+            <Button onClick={() => dispatch(toggleHideDone())} disabled={!isAnyDone}>
+                {hideDone ? "Show" : "Hide"} done
+            </Button>
+            <Button onClick={() => dispatch(toggleAllDone())} disabled={areAllDone}>
+                Mark All as Done
+            </Button>
+            <Button onClick={() => dispatch(removeAll())}>
+                Remove All
+            </Button>
+        </>
+    );
 }
 
 
