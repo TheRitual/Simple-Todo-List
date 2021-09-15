@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/SimpleToDoList/static/js/main.97495318.chunk.js",
-    "main.js.map": "/SimpleToDoList/static/js/main.97495318.chunk.js.map",
+    "main.js": "/SimpleToDoList/static/js/main.4f59626a.chunk.js",
+    "main.js.map": "/SimpleToDoList/static/js/main.4f59626a.chunk.js.map",
     "runtime-main.js": "/SimpleToDoList/static/js/runtime-main.8ae88dc8.js",
     "runtime-main.js.map": "/SimpleToDoList/static/js/runtime-main.8ae88dc8.js.map",
-    "static/js/2.b220dffb.chunk.js": "/SimpleToDoList/static/js/2.b220dffb.chunk.js",
-    "static/js/2.b220dffb.chunk.js.map": "/SimpleToDoList/static/js/2.b220dffb.chunk.js.map",
+    "static/js/2.a948119e.chunk.js": "/SimpleToDoList/static/js/2.a948119e.chunk.js",
+    "static/js/2.a948119e.chunk.js.map": "/SimpleToDoList/static/js/2.a948119e.chunk.js.map",
     "static/js/3.a983b4dc.chunk.js": "/SimpleToDoList/static/js/3.a983b4dc.chunk.js",
     "static/js/3.a983b4dc.chunk.js.map": "/SimpleToDoList/static/js/3.a983b4dc.chunk.js.map",
     "index.html": "/SimpleToDoList/index.html",
-    "static/js/2.b220dffb.chunk.js.LICENSE.txt": "/SimpleToDoList/static/js/2.b220dffb.chunk.js.LICENSE.txt"
+    "static/js/2.a948119e.chunk.js.LICENSE.txt": "/SimpleToDoList/static/js/2.a948119e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8ae88dc8.js",
-    "static/js/2.b220dffb.chunk.js",
-    "static/js/main.97495318.chunk.js"
+    "static/js/2.a948119e.chunk.js",
+    "static/js/main.4f59626a.chunk.js"
   ]
 }
