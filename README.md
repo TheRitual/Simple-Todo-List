@@ -1,9 +1,9 @@
 # Simple ToDo List created in React.js
 
-![screenshot](https://theritual.github.io/SimpleToDoList/splash.jpg)
+![screenshot](https://theritual.github.io/Simple-Todo-List//splash.jpg)
 
 Link:
-https://theritual.github.io/SimpleToDoList/
+https://theritual.github.io/Simple-Todo-List/
 
 Simple ToDo List created with React.js. Using Redux, Redux-Saga, Redux Router, Redux/Toolkit.
 
